@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/state_bar_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_top_bg">
+        <RadioGroup
+            android:id="@+id/replay_rg"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/replay_rb_video"
+                android:layout_height="wrap_content"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="视频"
+                android:checked="true"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:paddingTop="6dip"
+                android:paddingBottom="6dip"
+                android:textColor="@color/replay_title_text_sel"
+                android:background="@drawable/replay_rb_bg_01" />
+            <RadioButton
+                android:id="@+id/replay_rb_picture"
+                android:layout_height="wrap_content"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:text="照片"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:paddingTop="6dip"
+                android:paddingBottom="6dip"
+                android:textColor="@color/replay_title_text_sel"
+                android:background="@drawable/replay_rb_bg_02" />
+        </RadioGroup>
+        <ImageView
+            android:id="@+id/replay_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_main_setting"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/replay_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+</LinearLayout>

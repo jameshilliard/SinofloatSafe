@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/monitor_control_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_monitor_control_bg" />
+    <!--左上-->
+    <CheckBox
+        android:id="@+id/monitor_control_bitrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/monitor_control_bg"
+        android:layout_alignTop="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:button="@null"
+        android:background="@drawable/ic_control_bitrate_select" />
+    <TextView
+        android:id="@+id/monitor_control_bitrate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_toLeftOf="@+id/monitor_control_bitrate"
+       android:layout_alignTop="@+id/monitor_control_bitrate"
+        android:text="清晰度"/>
+
+   <!-- <ImageView
+        android:id="@+id/monitor_control_up_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/monitor_control_bg"
+        android:layout_alignTop="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="31dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_upleft_select" />-->
+    <!--上-->
+    <ImageView
+        android:id="@+id/monitor_control_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/monitor_control_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_up_select" />
+
+    <!--右上-->
+    <ImageView
+        android:id="@+id/monitor_control_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/monitor_control_bg"
+        android:layout_alignTop="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_shot_select" />
+    <TextView
+        android:id="@+id/monitor_control_shot_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/monitor_control_shot"
+        android:layout_alignTop="@+id/monitor_control_shot"
+        android:text="抓拍"/>
+
+   <!-- <ImageView
+        android:id="@+id/monitor_control_up_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/monitor_control_bg"
+        android:layout_alignTop="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_upright_select" />-->
+    <!--左-->
+
+    <CheckBox
+        android:id="@+id/monitor_control_defend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_2dp"
+        android:button="@null"
+        android:background="@drawable/ic_control_defend_select" />
+    <TextView
+        android:id="@+id/monitor_control_defend_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/white"
+        android:layout_toLeftOf="@+id/monitor_control_defend"
+        android:layout_alignTop="@+id/monitor_control_defend"
+        android:text="布防"/>
+
+    <ImageView
+        android:id="@+id/monitor_control_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_left_select" />
+    <!--右-->
+    <ImageView
+        android:id="@+id/monitor_control_zoom_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dimen_2dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_zoom_in_select" />
+    <TextView
+        android:id="@+id/monitor_control_zoom_in_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/monitor_control_zoom_in"
+        android:layout_alignTop="@+id/monitor_control_zoom_in"
+        android:text="拉近"/>
+
+    <ImageView
+        android:id="@+id/monitor_control_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_right_select" />
+    <!--左下-->
+    <CheckBox
+        android:id="@+id/monitor_control_mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/monitor_control_bg"
+        android:layout_alignLeft="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dimen_14dp"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:button="@null"
+        android:background="@drawable/ic_control_mute_select" />
+    <TextView
+        android:id="@+id/monitor_control_mute_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_toLeftOf="@+id/monitor_control_mute"
+        android:layout_alignBottom="@+id/monitor_control_mute"
+        android:text="静音"/>
+
+   <!-- <ImageView
+        android:id="@+id/monitor_control_down_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/monitor_control_bg"
+        android:layout_alignLeft="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="50dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_downleft_select" />-->
+    <!--下-->
+    <ImageView
+        android:id="@+id/monitor_control_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/monitor_control_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_down_select" />
+    <!--右下-->
+    <ImageView
+        android:id="@+id/monitor_control_zoom_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/monitor_control_bg"
+        android:layout_alignRight="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dimen_14dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_zoom_out_select" />
+    <TextView
+        android:id="@+id/monitor_control_zoom_out_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/monitor_control_zoom_out"
+        android:layout_alignBottom="@+id/monitor_control_zoom_out"
+        android:text="推远"/>
+
+  <!--  <ImageView
+        android:id="@+id/monitor_control_down_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/monitor_control_bg"
+        android:layout_alignRight="@+id/monitor_control_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="50dp"
+        android:clickable="true"
+        android:src="@drawable/ic_control_downright_select" />-->
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/monitor_control_topPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/monitor_control_cameraStateTextV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="摄像头旋转角度"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_18sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/monitor_control_definition"
+        android:layout_marginLeft="45dp"
+        android:layout_alignLeft="@+id/monitor_control_bg"
+        android:layout_alignTop="@+id/monitor_control_bg"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/monitor_control_definition_bg">
+        <RadioGroup
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/monitor_control_definition_rg"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/monitor_control_definition_rb_fd"
+                style="@style/radio_bitrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="流畅"
+                />
+            <RadioButton
+                android:id="@+id/monitor_control_definition_rb_sd"
+                style="@style/radio_bitrate"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="标清" />
+            <RadioButton
+                android:id="@+id/monitor_control_definition_rb_hd"
+                style="@style/radio_bitrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="高清" />
+        </RadioGroup>
+    </LinearLayout>
+    <!--中-->
+    <ImageView
+        android:id="@+id/monitor_control_talk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:src="@drawable/ic_control_talk" />
+</RelativeLayout>

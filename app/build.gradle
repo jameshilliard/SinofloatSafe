@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    signingConfigs {
+        release {
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.sinofloat.sinofloatsafe"
+        minSdkVersion 17
+        targetSdkVersion 22//版本只能为22或者以下,不然so库文件会报错
+        versionCode 1
+        versionName "3.160726"
+    }
+    buildTypes {
+        release {
+            //是否开启混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/EpointAuthSDK.jar')
+    compile files('libs/sinofloat_safe_new_decoder_v1_sdk.jar')
+    compile files('libs/xstream-1.4.7.jar')
+    //高德地图
+    compile files('libs/AMap_3DMap_V3.3.2_20160525.jar')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    //日志工具logger
+    compile 'com.orhanobut:logger:1.15'
+    //图片加载框架picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //一个进行了封装的RecyclerViewAdapter
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7'
+    //自定义开关按钮
+    compile 'com.kyleduo.switchbutton:library:1.4.1'
+    //view注入框架butterknife
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    //日期控件
+    compile 'com.squareup:android-times-square:1.6.5@aar'
+}

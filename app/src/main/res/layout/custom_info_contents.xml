@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/info_window_left_icon"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/info_window_ic"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/info_window_camera_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera Name"
+            android:layout_toRightOf="@+id/info_window_left_icon"
+            android:layout_toLeftOf="@+id/info_window_right_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/info_window_camera_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID:Amboeas"
+            android:layout_below="@+id/info_window_camera_name"
+            android:layout_toRightOf="@+id/info_window_left_icon"
+            android:layout_toLeftOf="@+id/info_window_right_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/info_window_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/info_window_right_ic"
+            >
+        </ImageView>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/info_window_camera_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

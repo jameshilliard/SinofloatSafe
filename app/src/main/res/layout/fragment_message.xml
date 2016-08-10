@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/state_bar_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_top_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16sp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="报警" />
+        <ImageView
+            android:id="@+id/message_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_main_setting"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#880079ff">
+
+        <Spinner
+            android:id="@+id/message_sp_left"
+            style="@style/customSpinner"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/message_sp_center">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/message_sp_center"
+            style="@style/customSpinner"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:layout_marginRight="20dp">
+
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/message_sp_right"
+            style="@style/customSpinner"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toRightOf="@id/message_sp_center">
+        </Spinner>
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/message_rlv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

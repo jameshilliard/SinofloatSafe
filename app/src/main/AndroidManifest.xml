@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sinofloat.mobilesafe"
+    android:versionName="@string/version">
+
+    <!-- 开机启动 权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- gprs定位 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- 用于判断网络的状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 加入權限設定 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen" -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar">
+
+        <!-- 离线地图需要配置的meta-data -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="f42c3c0e3ce38d3ef631d99084af8cc6"></meta-data>
+        <!-- 登录界面 -->
+        <activity android:name=".main.activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 主界面 -->
+        <activity android:name=".main.activity.MainActivity" />
+        <activity
+            android:name=".monitor.activity.CameraPreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".message.activity.MessagePreviewActivity" />
+        <activity android:name=".replay.activity.ImagePreviewActivity" />
+
+        <service android:name=".main.service.MonitorPhoneStateService" />
+
+        <activity
+            android:name=".replay.activity.VideoPreviewActivity"
+            android:screenOrientation="landscape"/>
+        <!-- 离线地图 -->
+        <activity android:name=".map.activity.OfflineMapActivity" />
+        <activity android:name=".setting.SettingActivity" />
+        <activity android:name=".setting.AboutActivity"></activity>
+        <activity android:name=".replay.activity.VideoSearchActivity"></activity>
+    </application>
+
+</manifest>

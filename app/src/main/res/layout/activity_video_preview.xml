@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    tools:context="com.sinofloat.mobilesafe.replay.activity.VideoPreviewActivity"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:clickable="true"
+        android:id="@+id/video_preview_rl_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.sinofloat.mobilesafe.widget.opengl.DisplayManagerView
+                android:id="@+id/video_preview_displayManagerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <SurfaceView
+                android:id="@+id/testSV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/video_preview_ll_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ProgressBar
+                android:id="@+id/video_preview_loading_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/video_preview_loading_StatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连接中"
+                android:textSize="@dimen/size_18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/video_preview_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/record_state_play" />
+
+    </RelativeLayout>
+
+
+         <!--顶部控制栏-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/video_preview_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#aa333333">
+        <ImageView
+            android:id="@+id/video_preview_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_back"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:id="@+id/video_preview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16sp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="CameraPreview" />
+    </RelativeLayout>
+
+
+    <!--底部控制栏-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/video_preview_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#aa333333">
+        <ImageView
+            android:padding="8dp"
+            android:id="@+id/video_preview_sub_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sub_rate_select"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:layout_toLeftOf="@+id/video_preview_rate"/>
+        <TextView
+            android:id="@+id/video_preview_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16sp"
+            android:padding="@dimen/dimen_5dp"
+            android:gravity="center"
+            android:text="X1" />
+        <ImageView
+            android:padding="8dp"
+            android:id="@+id/video_preview_add_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_rate_select"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:layout_toRightOf="@+id/video_preview_rate"/>
+    </RelativeLayout>
+</RelativeLayout>

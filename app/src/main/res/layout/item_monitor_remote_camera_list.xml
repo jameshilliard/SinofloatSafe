@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingBottom="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:background="@drawable/item_bg_select"
+    android:id="@+id/monitor_rlv_item"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <ImageView
+        android:id="@+id/monitor_rlv_item_cameraTypeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/mobile"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+
+
+    <TextView
+        android:id="@+id/monitor_rlv_item_cameraDisplayNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="圆球摄像头"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/monitor_rlv_item_cameraTypeImg"/>
+
+    <ImageView
+        android:id="@+id/monitor_rlv_item_rightImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/arrow_right_pressed"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+</RelativeLayout>
+</LinearLayout>

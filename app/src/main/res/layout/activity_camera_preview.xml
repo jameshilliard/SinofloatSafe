@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".monitor.activity.CameraPreviewActivity">
+    <ImageView
+        android:id="@+id/camera_preview_statebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/state_bar_bg"/>
+    <RelativeLayout
+        android:id="@+id/camera_preview_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_top_bg">
+        <ImageView
+            android:id="@+id/camera_preview_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_back"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:id="@+id/camera_preview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16sp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="CameraPreview" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/camera_preview_rl_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.sinofloat.mobilesafe.widget.opengl.DisplayManagerView
+                android:id="@+id/camera_preview_displayManagerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <SurfaceView
+                android:id="@+id/testSV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/camera_preview_ll_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ProgressBar
+                android:id="@+id/camera_preview_loading_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/camera_preview_loading_StatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连接中"
+                android:textSize="@dimen/size_18sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/camera_preview_rl_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#25262a"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/camera_preview_rg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/camera_preview_rb_list"
+                    style="@style/radio_tab_camera_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_monitor_list_select"
+                    android:text="列表"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/camera_preview_rb_control"
+                    style="@style/radio_tab_camera_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_monitor_control_select"
+                    android:text="控制" />
+
+                <RadioButton
+                    android:id="@+id/camera_preview_rb_position"
+                    style="@style/radio_tab_camera_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_monitor_position_select"
+                    android:text="预位置" />
+            </RadioGroup>
+
+            <RadioButton
+                style="@style/radio_tab"
+                android:id="@+id/camera_preview_rb_full_screen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_monitor_fullscreen_select"
+                android:text="全屏" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/camera_preview_fl_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/item_bg_select"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/message_item">
+    <LinearLayout
+        android:id="@+id/message_item_leftPart"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#32b4ff"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_message_left"/>
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#32b4ff"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/message_item_deviceName"
+        android:layout_above="@+id/message_item_time"
+        android:layout_toRightOf="@+id/message_item_leftPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#32b4ff"
+        android:text="Device Name"/>
+    <ImageView
+        android:id="@+id/message_item_clock"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/message_item_leftPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_message_clock"/>
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/message_item_time"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/message_item_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:51 AM"/>
+    <TextView
+        android:id="@+id/message_item_eventName"
+        android:layout_below="@+id/message_item_time"
+        android:layout_toRightOf="@+id/message_item_leftPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of the event"/>
+
+    <TextView
+        android:layout_toLeftOf="@+id/message_item_right"
+        android:layout_marginRight="80dp"
+        android:id="@+id/message_item_eventType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event type"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:id="@+id/message_item_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_message_right"/>
+</RelativeLayout>

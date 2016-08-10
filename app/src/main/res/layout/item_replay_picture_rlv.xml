@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+    <LinearLayout
+        android:background="@drawable/item_bg_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ImageView
+        android:padding="2dp"
+        android:id="@+id/replay_picture_item_iv"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon"/>
+    <TextView
+        android:id="@+id/replay_picture_item_tv_camera_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_14sp"
+        android:text="PB Layer" />
+    <TextView
+        android:id="@+id/replay_picture_item_tv_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_12sp"
+        android:visibility="gone"
+        android:text="Video camera-001" />
+    <TextView
+        android:id="@+id/replay_picture_item_tv_timestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_12sp"
+        android:text="2016-10-10" />
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/replay_picture_item_cb"
+        style="@style/CustomCheckboxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginRight="4dp"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

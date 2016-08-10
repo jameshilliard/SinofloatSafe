@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#313131"
+    tools:context="com.sinofloat.mobilesafe.setting.SettingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/state_bar_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_top_bg">
+
+        <ImageView
+            android:id="@+id/setting_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:src="@drawable/ic_main_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dimen_5dp"
+            android:text="设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/setting_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="基本设置"
+        android:textColor="#019285" />
+
+    <RelativeLayout
+        android:id="@+id/setting_login"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/item_bg_select">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="当前登录账号" />
+
+        <TextView
+            android:id="@+id/setting_tv_login"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="192.168.1.1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/setting_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="音频设置" />
+
+        <TextView
+            android:id="@+id/setting_tv_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="开启" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/setting_sb_voice"
+            style="@style/SwitchButtonStyleMD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/setting_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="布防设置" />
+
+        <TextView
+            android:id="@+id/setting_tv_defend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="开启" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/setting_sb_defend"
+            style="@style/SwitchButtonStyleMD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_video"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/item_bg_select">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="视频质量" />
+
+        <TextView
+            android:id="@+id/setting_tv_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="标清" />
+    </RelativeLayout>
+<TextView
+    android:background="#2d2e33"
+    android:layout_width="match_parent"
+    android:layout_height="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/setting_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="其他"
+        android:textColor="#019285" />
+
+    <RelativeLayout
+        android:id="@+id/setting_version"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/item_bg_select">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="版本" />
+
+        <TextView
+            android:id="@+id/setting_tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="已经是最新版本了" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/setting_about"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/item_bg_select"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:textColor="@color/white"
+        android:text="关于我们" />
+    <TextView
+        android:id="@+id/setting_exit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/item_bg_select"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:textColor="@color/white"
+        android:text="退出登录" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#25262a"/>
+
+
+</LinearLayout>

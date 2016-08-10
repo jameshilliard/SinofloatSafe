@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/setting_rg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:id="@+id/setting_rb_fd"
+        style="@style/radio_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_setting_video_select"
+        android:text="流畅"
+        />
+    <RadioButton
+        android:id="@+id/setting_rb_sd"
+        style="@style/radio_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_setting_video_select"
+        android:text="标清" />
+    <RadioButton
+        android:id="@+id/setting_rb_hd"
+        style="@style/radio_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_setting_video_select"
+        android:text="高清" />
+</RadioGroup>
+</LinearLayout>
